@@ -1,9 +1,7 @@
 {
-  "name": "native.react.fundamentals",
-  "displayName": "native.react.fundamentals",
   "expo": {
     "name": "native.react.fundamentals",
-    "slug": "native.react.fundamentals",
+    "slug": "fundamentals",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
