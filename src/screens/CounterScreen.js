@@ -1,6 +1,11 @@
 // - Imports
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
+
+const STEP = 1;
+const INCREMENT_COUNTER = "INCREMENT_COUNTER";
+const DECREMENT_COUNTER = "DECREMENT_COUNTER";
+const initialState = { counter: 0 };
 
 /**
  * CounterScreen Component
@@ -8,27 +13,38 @@ import { Button, StyleSheet, Text, View } from "react-native";
  */
 const CounterScreen = (props) => {
     /** State */
-    const [counter, setCounter] = useState(0);
-    const counterStep = 1;
-
-    /** Increment Counter */
-    const handleCounterIncrement = () => {
-        setCounter(counter + counterStep);
-    };
-
-    /** Decrement Counter */
-    const handleCounterDecrement = () => {
-        setCounter(counter - counterStep);
-    };
+    const [state, dispatch] = useReducer(counterReducer, initialState);
 
     return (
         <View style={styles.container}>
-            <Text style={styles.primaryText}>Current Count: {counter}</Text>
-            <Button title="Increase" onPress={handleCounterIncrement} />
-            <Button title="Decrease" onPress={handleCounterDecrement} />
+            <Text style={styles.primaryText}>Current Count: {state.counter}</Text>
+            <Button title="Increase" onPress={() => incrementCounter(dispatch)} />
+            <Button title="Decrease" onPress={() => decrementCounter(dispatch)} />
         </View>
     );
 };
+
+/** Increment Counter Action */
+function incrementCounter(dispatch) {
+    dispatch({ type: INCREMENT_COUNTER });
+}
+
+/** Decrement Counter Action */
+function decrementCounter(dispatch) {
+    dispatch({ type: DECREMENT_COUNTER });
+}
+
+/** Counter Reducer */
+function counterReducer(state, action) {
+    switch (action.type) {
+        case INCREMENT_COUNTER:
+            return { ...state, counter: state.counter + 1 };
+        case DECREMENT_COUNTER:
+            return { ...state, counter: state.counter - 1 };
+        default:
+            return state;
+    }
+}
 
 // - Styles
 const styles = StyleSheet.create({

@@ -2,6 +2,8 @@
 import ColorScreen from "../screens/ColorScreen";
 import ComponentsScreen from "../screens/ComponentsScreen";
 import CounterScreen from "../screens/CounterScreen";
+import EditorScreen from "../screens/EditorScreen";
+import FormScreen from "../screens/FormScreen";
 import ImageScreen from "../screens/ImageScreen";
 import ListScreen from "../screens/ListScreen";
 
@@ -15,6 +17,8 @@ const screens = [
     ImageScreen,
     CounterScreen,
     ColorScreen,
+    EditorScreen,
+    FormScreen,
 ];
 
 /**
@@ -26,9 +30,9 @@ const screenOptions = screens.map((screen) => {
     return {
         [ScreenName]: {
             screen,
-            navigationOptions: () => {
-                return { title: ScreenName };
-            },
+            navigationOptions: () => ({
+                title: ScreenName,
+            }),
         },
     };
 });

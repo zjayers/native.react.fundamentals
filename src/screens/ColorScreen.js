@@ -19,8 +19,8 @@ const ColorScreen = (props) => {
                 data={colors}
                 renderItem={renderColorBox}
                 keyExtractor={(i) => i}
-                showsHorizontalScrollIndicator={false} // Hide Horizontal Scroll Bar
-                showsVerticalScrollIndicator={false} // Hide Vertical Scroll Bar
+                showsHorizontalScrollIndicator={false}
+                showsVerticalScrollIndicator={false}
                 style={styles.flatList}
                 numColumns={3}
             />
@@ -28,12 +28,17 @@ const ColorScreen = (props) => {
     );
 };
 
-function renderColorBox({ item }) {
+/**
+ * Renders a new color box to the screen
+ * @param rgbValue - The RBG Value to display to the screen
+ * @returns {JSX.Element} - JXS to be rendered to the screen
+ */
+function renderColorBox({ item: rgbValue }) {
     return (
         <View
             style={{
                 ...styles.colorBox,
-                backgroundColor: item,
+                backgroundColor: rgbValue,
             }}
         />
     );
