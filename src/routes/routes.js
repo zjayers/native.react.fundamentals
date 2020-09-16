@@ -1,8 +1,10 @@
 // - Imports
+import BoxModelScreen from "../screens/BoxModelScreen";
 import ColorScreen from "../screens/ColorScreen";
 import ComponentsScreen from "../screens/ComponentsScreen";
 import CounterScreen from "../screens/CounterScreen";
 import EditorScreen from "../screens/EditorScreen";
+import FlexBoxScreen from "../screens/FlexBoxScreen";
 import FormScreen from "../screens/FormScreen";
 import ImageScreen from "../screens/ImageScreen";
 import ListScreen from "../screens/ListScreen";
@@ -19,6 +21,8 @@ const screens = [
     ColorScreen,
     EditorScreen,
     FormScreen,
+    BoxModelScreen,
+    FlexBoxScreen,
 ];
 
 /**
