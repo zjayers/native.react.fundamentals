@@ -1,8 +1,7 @@
 # Native React Fundamentals
-[![GitHub Release](https://img.shields.io/github/release/zjayers/native.react.fundamentals.svg?style=flat)]()
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/zjayers/native.react.fundamentals.svg?style=flat)]()
+[![GitHub Release](https://img.shields.io/github/release/zjayers/native.react.fundamentals.svg?style=flat)](https://github.com/zjayers/native.react.fundamentals/releases)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/zjayers/native.react.fundamentals.svg?style=flat)](https://github.com/zjayers/native.react.fundamentals/pulls)
 [![Issues](https://img.shields.io/github/issues-raw/zjayers/native.react.fundamentals.svg?maxAge=25000)](https://github.com/zjayers/native.react.fundamentals/issues)
-[![MIT License](https://img.shields.io/apm/l/atomic-ui.svg?)](https://github.com/zjayers/native.react.fundamentals/blob/master/LICENSEs)
 
 ## Description
 
